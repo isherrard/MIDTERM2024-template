@@ -136,7 +136,7 @@ Material:
     - _ZWrite: 1
     - _circleDensity: 30
     - _falloffThreshold: 2.5
-    - _litThreshold: 0.69
+    - _litThreshold: 0.9
     - _rotation: 45
     - _shadingMultiplier: 0
     - _softness: 0.2
