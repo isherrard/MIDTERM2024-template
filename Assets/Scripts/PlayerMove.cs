@@ -81,6 +81,13 @@ public class PlayerMove : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
+        if (characterController.isGrounded)
+        {
+            characterController.Move(moveNormalized * Time.deltaTime);
+        } else
+        {
+            characterController.Move(moveDirection * Time.deltaTime);
+        }
 
 
         //rotation
