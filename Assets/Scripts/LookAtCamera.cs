@@ -9,13 +9,21 @@ public class LookAtCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraPos = Camera.main.transform;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         //transform.LookAt(cameraPos, Vector3.up);
-        transform.LookAt(new Vector3(cameraPos.position.x, cameraPos.position.y / 2, cameraPos.position.z), Vector3.up);
+        if (Camera.main != null)
+        {
+            transform.LookAt(new Vector3(cameraPos.position.x, cameraPos.position.y / 2, cameraPos.position.z), Vector3.up);
+
+        }
+    }
+    public void GetMainCamera()
+    {
+        cameraPos = Camera.main.transform;
     }
 }

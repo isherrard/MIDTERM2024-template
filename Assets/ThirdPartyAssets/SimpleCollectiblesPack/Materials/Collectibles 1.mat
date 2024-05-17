@@ -141,7 +141,7 @@ Material:
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _circleDensity: 31.18
+    - _circleDensity: 0
     - _falloffThreshold: 2.5
     - _lightingCutoff: 0.144
     - _litThreshold: 1

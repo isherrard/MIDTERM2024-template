@@ -16,10 +16,11 @@ public class SimpleCollectibleScript : MonoBehaviour {
 	public AudioClip collectSound;
 
 	public GameObject collectEffect;
+	private UIController uiController;
 
 	// Use this for initialization
 	void Start () {
-		
+		uiController = GameObject.Find("Player").GetComponent<UIController>();
 	}
 	
 	// Update is called once per frame
@@ -49,20 +50,20 @@ public class SimpleCollectibleScript : MonoBehaviour {
 		if (CollectibleType == CollectibleTypes.NoType) {
 
 			//Add in code here;
-
+			uiController.Pickup();
 			Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type1) {
 
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
+            //Add in code here;
+            uiController.Pickup();
+            Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type2) {
 
-			//Add in code here;
-
-			Debug.Log ("Do NoType Command");
+            //Add in code here;
+            uiController.Pickup();
+            Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type3) {
 
@@ -85,4 +86,5 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 		Destroy (gameObject);
 	}
+
 }
